@@ -1,0 +1,284 @@
+<?php
+include 'connect.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./css/image.png" type="image/x-icon" />
+    <title>FR-DASHBOARD</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="./index.html"><img src="./css/image.png" alt="FR Logo" /></a>
+        </div>
+        <!-- Menu -->
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li> 
+          <li><a href="#work">Work</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">
+              Product & Solutions<span class="arrow">&#9662;</span>
+            </a>
+            <div class="dropdown-content">
+              <a href="#ip-telephony">IP Telephony Solution</a>
+              <a href="#network-connectivity"
+                >Network & Connectivity Solution</a
+              >
+              <a href="#design-testing">Design & Testing</a>
+              <a href="#other-services">Other IT Services</a>
+            </div>
+          </li>
+          <li><a href="#internship">Magang</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- Profile Icon -->
+        <div class="right-icons">
+          <div class="profile">
+            <a href="#" class="profile-link" onclick="toggleProfileMenu()">
+              <img src="./css/download.png" alt="Profile" />
+            </a>
+            <div
+              class="profile-dropdown"
+              id="profileDropdown"
+              class="profile-dropdown"
+            >
+              <a href="#settings">Settings</a>
+              <a href="logout.php">Logout</a>
+            </div>
+          </div>
+          <!-- Hamburger Icon -->
+          <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="dashboard">
+        <div class="card">
+          <h2>Project Pending</h2>
+          <div class="counter" data-target="45">0</div>
+        </div>
+        <div class="card">
+          <h2>Project Progress</h2>
+          <div class="counter" data-target="20">0</div>
+        </div>
+        <div class="card">
+          <h2>Project Success</h2>
+          <div class="counter" data-target="100">0</div>
+        </div>
+        <div class="card">
+          <h2>Corporate Clients</h2>
+          <div class="counter" data-target="75">0</div>
+        </div>
+      </section>
+
+      <section class="updates">
+        <div class="card">
+          <div class="table-container">
+            <h2>UPDATE KETERANGAN PROJECT</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Commit</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="task-item">
+                  <td>
+                    <img
+                      src="./css/download.png"
+                      alt="logo"
+                      style="width: 40px; border-radius: 19px"
+                    />
+                  </td>
+                  <td>PENAMBAHAN FITUR lading page</td>
+                  <td>29 Juni 2024</td>
+                </tr>
+                <tr class="task-item">
+                  <td>
+                    <img src="./css/download.png" alt="logo" class="logo-img" />
+                  </td>
+                  <td>membuat login</td>
+                  <td>29 Juni 2024</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="chart-container">
+          <h2>Grafik Project</h2>
+          <canvas
+            id="developmentActivityChart"
+            width="900"
+            height="400"
+          ></canvas>
+        </div>
+      </section>
+
+      <section class="tasks">
+        <div class="card-tasks">
+          <h2>Task List</h2>
+          <div class="scroll">
+            <div class="task-item">
+              <input type="checkbox" checked placeholder="checked" />
+              <div class="task-details">
+                <p>Extend the data model</p>
+                <span class="date">August 05, 2021</span>
+                <img
+                  src="./css/download.png"
+                  alt="Profile"
+                  class="profile-img"
+                />
+              </div>
+            </div>
+            <div class="task-item">
+              <input type="checkbox" placeholder="checked" />
+              <div class="task-details">
+                <p>Verify the event flow</p>
+                <span class="date">January 01, 2019</span>
+                <img
+                  src="./css/download.png"
+                  alt="Profile"
+                  class="profile-img"
+                />
+              </div>
+            </div>
+            <div class="task-item">
+              <input type="checkbox" placeholder="checked" />
+              <div class="task-details">
+                <p>Verify the event flow</p>
+                <span class="date">January 01, 2019</span>
+                <img
+                  src="./css/download.png"
+                  alt="Profile"
+                  class="profile-img"
+                />
+              </div>
+            </div>
+            <div class="task-item">
+              <input type="checkbox" placeholder="checked" />
+              <div class="task-details">
+                <p>Verify the event flow</p>
+                <span class="date">January 01, 2019</span>
+                <img
+                  src="./css/download.png"
+                  alt="Profile"
+                  class="profile-img"
+                />
+              </div>
+            </div>
+            <div class="task-item">
+              <input type="checkbox" placeholder="checked" />
+              <div class="task-details">
+                <p>Verify the event flow</p>
+                <span class="date">January 01, 2019</span>
+                <img
+                  src="./css/download.png"
+                  alt="Profile"
+                  class="profile-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-tasks">
+          <h2>file Figma</h2>
+          <div class="files-container">
+            <table class="table-figma">
+              <thead>
+                <tr>
+                  <th>Page Name</th>
+                  <th>Visitor</th>
+                  <th>Unique</th>
+                  <th>Bounce Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#">./layout page.html</a></td>
+                  <td>400</td>
+                  <td>350</td>
+                  <td>45%</td>
+                </tr>
+                <tr>
+                  <td><a href="#">./layout page.html</a></td>
+                  <td>400</td>
+                  <td>350</td>
+                  <td>45%</td>
+                </tr>
+                <tr>
+                  <td><a href="#">./layout page.html</a></td>
+                  <td>400</td>
+                  <td>350</td>
+                  <td>45%</td>
+                </tr>
+                <tr>
+                  <td><a href="#">./layout page.html</a></td>
+                  <td>400</td>
+                  <td>350</td>
+                  <td>45%</td>
+                </tr>
+                <tr>
+                  <td><a href="#">./layout page.html</a></td>
+                  <td>400</td>
+                  <td>350</td>
+                  <td>45%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      
+      <section class="upload-section">
+        <h2>Upload Gambar dan Video</h2>
+        <div class="upload-container">
+          <button onclick="window.location.href='./upload.html'">Upload</button>
+        </div>
+        <div class="images-table">
+          <h3>Daftar Gambar</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>nama</th>
+                <th>tipe</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>image1.png</td>
+                <td>gambar</td>
+                <td>
+                  <button onclick="viewDetails('image1.png')">Detail</button>
+                  <button onclick="deleteImage('image1.png')">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>image2.video</td>
+                <td>video</td>
+                <td>
+                  <button onclick="viewDetails('image2.video')">Detail</button>
+                  <button onclick="deleteImage('image2.video')">Delete</button>
+                </td>
+              </tr>
+              <!-- Tambahkan baris gambar lainnya sesuai kebutuhan -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </body>
+</html>

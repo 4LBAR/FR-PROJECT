@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px; /* Lebar maksimum kontainer */
+  margin: auto; /* Pusatkan kontainer */
+  padding: 20px; /* Ruang dalam kontainer */
+  border: 1px solid #ccc; /* Garis batas */
+  border-radius: 5px; /* Sudut melengkung */
+  background-color: #f9f9f9; /* Warna latar belakang */
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Susun elemen secara vertikal */
+}
+
+label {
+  margin-bottom: 5px; /* Jarak antara label dan input */
+}
+
+input[type="text"],
+select,
+textarea,
+input[type="date"],
+input[type="file"] {
+    margin-top:12px;
+  margin-bottom: 15px; /* Jarak antara input */
+  padding: 10px; /* Ruang dalam input */
+  border: 1px solid #ccc; /* Garis batas input */
+  border-radius: 4px; /* Sudut melengkung input */
+}
+
+input[type="submit"] {
+  background-color: #4caf50; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  padding: 10px; /* Ruang dalam tombol */
+  border: none; /* Tanpa garis batas */
+  border-radius: 4px; /* Sudut melengkung tombol */
+  cursor: pointer; /* Kursor tangan saat hover */
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049; /* Warna latar belakang saat hover */
+}
+/* Responsif */
+@media (max-width: 600px) {
+  .container {
+    width: 90%; /* Lebar kontainer pada layar kecil */
+  }
+}
+
+/* Tambahkan gaya untuk tombol kembali */
+.btn {
+  text-align: center; /* Pusatkan teks */
+  display: inline-block; /* Tampilkan sebagai blok inline */
+  margin-top: 10px; /* Jarak atas */
+  padding: 10px 15px; /* Ruang dalam tombol */
+  border: 1px solid #ccc; /* Garis batas tombol */
+  border-radius: 4px; /* Sudut melengkung tombol */
+  text-decoration: none; /* Hapus garis bawah */
+  color: #fff; /* Warna teks */
+  background-color: #007bff; /* Warna latar belakang tombol */
+  width: auto; /* Ubah lebar tombol menjadi otomatis */
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Warna latar belakang tombol sekunder */
+}
+
+.btn:hover {
+  opacity: 0.8; /* Efek hover */
+}
+
+input[type="button"] {
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  padding: 10px; /* Ruang dalam tombol */
+  border-radius: 4px; /* Sudut melengkung tombol */
+  cursor: pointer; /* Kursor tangan saat hover */
+  text-align: center; /* Pusatkan teks */
+}
+
+input[type="button"]:hover {
+  background-color: #0056b3; /* Warna latar belakang saat hover */
+}
+
+.spaced {
+    margin-top: 20px; /* Jarak atas untuk elemen */
+}

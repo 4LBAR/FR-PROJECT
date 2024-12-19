@@ -1,0 +1,539 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #333;
+}
+h2 {
+  padding-left: 8px;
+  color: #1b1515;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.1s;
+  font-size: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 12px;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #d9d9d97f;
+}
+
+.profile img {
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.profile-dropdown {
+  display: none; 
+  position: absolute;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  right: 3px;
+  margin-top: 2px;
+  margin-right: 10px;
+  padding: 15px;
+}
+
+.profile-dropdown h1 {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.profile-dropdown a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.profile-dropdown a:hover {
+  background-color: #334;
+}
+/* main */
+main {
+  padding: 20px;
+}
+/* dashboard */
+.dashboard {
+  display: flex;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 12px; 
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 20px);
+  color: #ffffff;
+}
+
+.counter {
+  font-size: 2em;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Updates section styles */
+.updates {
+  display: flex;
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.chart-tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 320px);
+  margin: 0 5px 0;
+}
+
+.chart-tasks table {
+  color: #000;
+}
+
+.table-container,
+.chart-container {
+  flex: 1; 
+}
+
+.table-container {
+  margin-bottom: 20px;
+  padding: 20px 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: auto;
+  color: #ffffff;
+  background-color: #333;
+  border-radius: 12px;
+}
+.table-container h2 {
+  padding-left: 2px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+.td {
+  padding: 2px 3px;
+}
+
+.td img {
+  padding: 1px;
+  width: 40;
+  height: 40;
+  object-fit: cover;
+}
+
+th {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Tasks section styles */
+.tasks {
+  display: flex;
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.card-tasks {
+  display: flex; 
+  flex-direction: column;
+  align-items: stretch; 
+  background-color: #fff; 
+  border-radius: 12px;  
+  width: calc(100% - 320px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+.scroll {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  padding: 10px;
+  color: #000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-details {
+  margin-left: 10px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  gap: 10px;
+}
+.task-date {
+  padding-left: auto;
+}
+
+.profile-img {
+  height: 30px;
+  width: 30px; 
+  border-radius: 50%;
+}
+.table-container {
+  width: 100%;
+}
+
+/* Styles for Files section */
+.files {
+  background-color: #333; /* Background color for files section */
+  padding: 20px 0; /* Add padding */
+  border-radius: 12px; /* Rounded corners */
+  color: #ffffff; /* Text color */
+  margin-bottom: 20px;
+}
+.file a {
+  color: #ffffff;
+}
+
+/* Styles for Uploads section */
+.uploads {
+  background-color: #333; /* Background color for uploads section */
+  padding: 20px 0; /* Add padding */
+  border-radius: 12px; /* Rounded corners */
+  color: #ffffff; /* Text color */
+  margin-bottom: 20px;
+}
+
+/* Styles for Upload Section */
+.upload-section {
+  background-color: #fff; /* Warna latar belakang untuk section upload */
+  padding: 20px; /* Tambahkan padding */
+  border-radius: 12px; /* Sudut membulat */
+  color: #000; /* Warna teks */
+  margin-bottom: 20px; /* Jarak bawah */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.images-table {
+  margin-top: 20px; /* Jarak atas untuk tabel gambar */
+}
+
+.images-table table {
+  width: 100%; /* Lebar tabel 100% */
+  border-collapse: collapse; /* Menghilangkan jarak antara border */
+}
+
+.images-table th,
+.images-table td {
+  text-align: left; /* Rata kiri untuk teks */
+  padding: 10px 15px; /* Tambahkan padding untuk jarak antar kolom */
+}
+
+.images-table th {
+  background-color: #f2f2f2; /* Warna latar belakang header tabel */
+  color: #000; /* Warna teks header tabel */
+}
+
+.images-table button {
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Tanpa border */
+  padding: 5px 10px; /* Padding tombol */
+  border-radius: 5px; /* Sudut membulat */
+  cursor: pointer; /* Kursor pointer saat hover */
+  margin-right: 5px; /* Jarak antar tombol */
+}
+
+.images-table button:hover {
+  background-color: #0056b3; /* Warna latar belakang saat hover */
+}
+
+.images-table .btn.delete {
+  background-color: red; /* Warna latar belakang merah untuk tombol delete */
+  color: white; /* Warna teks tombol */
+}
+
+.images-table .btn.delete:hover {
+  background-color: darkred; /* Warna latar belakang saat hover untuk tombol delete */
+}
+
+.upload-button {
+  background-color: #666; /* Warna latar belakang tombol */
+  color: #ffffff; /* Warna teks tombol */
+  padding: 10px 15px; /* Padding tombol */
+  border: none; /* Tanpa border */
+  border-radius: 5px; /* Sudut membulat */
+  cursor: pointer; /* Kursor pointer saat hover */
+}
+
+.upload-button:hover {
+  background-color: #ddd; 
+  color: #000;
+}
+
+.upload-figma-button {
+  background-color: #007bff; /* Warna latar belakang untuk tombol upload Figma */
+  color: #000; /* Warna teks tombol */
+  padding: 10px 15px; /* Padding tombol */
+  border: none; /* Tanpa border */
+  border-radius: 5px; /* Sudut membulat */
+  cursor: pointer; /* Kursor pointer saat hover */
+}
+
+.upload-figma-button:hover {
+  background-color: #0056b3; /* Warna latar belakang saat hover */
+}
+
+/* @media */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide menu on smaller screens */
+    flex-direction: column;
+    right: 0;
+    background-color: #333;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 5;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .nav-links li {
+    margin: 5px;
+  }
+  .nav-links a {
+    font-size: 16px;
+  }
+  .menu-icon {
+    display: block; /* Show hamburger icon on smaller screens */
+  }
+  .dashboard {
+    display: grid; /* Ubah dari inline-grid ke grid */
+    grid-template-columns: repeat(2, 2fr); /* Dua kolom */
+    grid-template-rows: auto; /* Baris otomatis */
+    gap: 10px 0;
+    margin-bottom: 11px;
+    font-size: 12px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: #fff;
+    border: 3px solid ;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: auto;
+  }
+
+  .counter {
+    font-size: 2em;
+    font-weight: bold;
+    align-items: left;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav-links a {
+    font-size: 14px; /* Smaller font for smaller screens */
+  }
+  .logo img {
+    height: 30px; /* Adjust logo size on very small screens */
+  }
+  .dashboard {
+    display: flex; /* Ubah dari grid ke flex */
+    flex-direction: column; /* Ubah arah menjadi kolom */
+  }
+
+  .chart-tasks {
+    order: 1; /* Pindahkan chart ke atas */
+  }
+
+  .card-tasks {
+    order: 2; /* Pindahkan card ke bawah */
+  }
+
+  /* Tambahkan aturan baru untuk responsif */
+  .nav-links {
+    flex-direction: column; /* Ubah menjadi kolom */
+    align-items: flex-start; /* Rata kiri */
+  }
+
+  .task-item {
+    flex-direction: column; /* Ubah menjadi kolom untuk item tugas */
+    align-items: flex-start; /* Rata kiri */
+  }
+
+  .card-tasks {
+    width: 100%; /* Pastikan lebar penuh */
+  }
+
+  .upload-section {
+    text-align: center; /* Rata tengah untuk section upload */
+  }
+
+  .images-table table {
+    width: 100%; /* Lebar tabel 100% */
+  }
+}
+
+/* Tambahkan ke styles.css */
+.invoice-container {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc; /* Border untuk kontainer */
+  border-radius: 5px; /* Sudut melengkung */
+  background-color: #f9f9f9; /* Warna latar belakang */
+}
+
+table {
+  width: 100%; /* Lebar tabel 100% */
+  border-collapse: separate; /* Menghilangkan jarak antara border */
+  border-spacing: 0; /* Menghilangkan jarak antara border */
+  border-radius: 12px; /* Sudut membulat untuk tabel */
+  overflow: hidden; /* Sembunyikan overflow untuk sudut membulat */
+}
+
+th,
+td {
+  padding: 10px; 
+  text-align: left; 
+  border-bottom: none;
+}
+
+th {
+  background-color: #f2f2f2; 
+}
+
+.logo-img {
+  width: 40px; 
+  border-radius: 19px; 
+}
+
+
+.chart-container {
+  margin: 20px 0; 
+  padding: 20px; 
+  background-color: #fff; 
+  border-radius: 12px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.images-table th:nth-child(2),
+.images-table th:nth-child(3),
+.images-table td:nth-child(2),
+.images-table td:nth-child(3) {
+  width: 150px; 
+}

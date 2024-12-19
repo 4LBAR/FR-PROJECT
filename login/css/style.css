@@ -1,0 +1,52 @@
+/* Tambahkan gaya untuk kontainer */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk judul */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Gaya untuk grup hasil */
+.result-group {
+    margin-bottom: 15px;
+}
+
+/* Gaya untuk label */
+.result-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Gaya untuk gambar */
+.result-group img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Gaya untuk tombol */
+.button-group {
+    text-align: center;
+}
+
+.btn-back {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}
